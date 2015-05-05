@@ -1,0 +1,95 @@
+{% extends 'layout.html' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  
+</head>
+
+<style>
+body {
+    background-image: url("http://i.imgur.com/ZS4yTEN.jpg");
+}
+</style>
+</head>
+<body>
+<body>
+
+<div class="jumbotron">
+  <h1>LGenuiss</h1>      
+  <p>Fun.Love.Enjoy.  #KatyPerry</p>
+  
+
+<div class="container">
+  <a href="http://lgeniuss.github.io/110110603-Web/2.html"><button type="button" class="btn btn-primary">深入瞭解</button></a>
+  
+
+</div>
+
+</div>
+
+<div class="container">
+<img src="http://i.imgur.com/eHWxCgZ.jpg" class="img-rounded" alt="Cinque Terre" > 
+</div>
+
+
+<div class="container">
+  <h1>Katy Perry No.1 song</h1>    
+
+  <div class="container">
+  <h2>Hot billboard</h2>            
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Song name</th>
+        <th></th>
+        <th>List</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Roar</td>
+        <td></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Firework</td>
+        <td></td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Dark Horse</td>
+        <td></td>
+        <td>3</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+</body>
+</html>
+
+
+  <h1 style="color:red">Posts</h1>
+  <p>You have <strong>{{ posts.length }}</strong> posts!</p>
+  <p><a href="/post/new">Create a Post</a></p>
+  <ul id="posts">
+    {% for post in posts %}
+      <li>
+        <h2>{{ post.title }}</h2>
+        <p><a href="/post/{{ post.id }}">Read post</a></p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
